@@ -1,0 +1,22 @@
+java -cp mylib.jar:. EchoServer 8000  
+
+
+To build the Jar file that will be the library make a heap of files in a directory that is all under same package namespace
+
+1) Make a Build Directory
+
+2) 
+javac -d ./build *.java
+
+if there are no errors in the build directory there should be a class tree.Move int the build directory and
+
+3)
+jar cvf YourJar.jar *
+
+Which gives you the Jar of the library
+
+Then to run the library you have to import it in the Java file ie 
+import mylib.*;
+
+Then it needs to be on the classpath which is done via
+java -cp mylib.jar:. EchoServer 8000  
